@@ -67,7 +67,14 @@ import Observation
         
     
     func calculateSurfaceArea(x: Double, y: Double, z: Double) async -> (Type: String, StringToDisplay: String, Value: Double){
+        // Surface area = 2(xy + yz + xz)
+        let calculatedSurfaceArea = 2*(x*y + y*z + x*z)
+        let newSurfaceAreaText = String(format: "%7.5f", calculatedSurfaceArea)
         
+        await updateSurfaceArea(surfaceAreaTextString: newSurfaceAreaText)
+        await newSurfaceAreaValue(surfaceAreaValue: calculatedSurfaceArea)
+        
+        return (Type: "Surface Area", StringToDisplay: newSurfaceAreaText, Value: calculatedSurfaceArea)
     }
     
     func calculateVolume(x: Double, y: Double, z: Double) async -> (Type: String, StringToDisplay: String, Value: Double){
@@ -92,5 +99,17 @@ import Observation
                 }
             }
         }
+    }
+    @MainActor func updateSurfaceArea(surfaceAreaTextString: String){
+        surfaceAreaText = surfaceAreaTextString
+    }
+    @MainActor func newSurfaceAreaValue(surfaceAreaValue: Double){
+        self.surfaceArea = surfaceAreaValue
+    }
+    @MainActor func updateVolume(volumeTextString: String){
+        volumeText = volumeTextString
+    }
+    @MainActor func newVolumeValue(volumeValue: Double){
+        self.volume = volumeValue
     }
 }
