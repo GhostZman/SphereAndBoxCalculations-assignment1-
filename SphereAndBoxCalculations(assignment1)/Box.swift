@@ -78,7 +78,14 @@ import Observation
     }
     
     func calculateVolume(x: Double, y: Double, z: Double) async -> (Type: String, StringToDisplay: String, Value: Double){
+        //Volume = xyz
+        let calculatedVolume = x*y*z
+        let newVolumeText = String(format: "%7.5", calculatedVolume)
         
+        await updateVolume(volumeTextString: newVolumeText)
+        await newVolumeValue(volumeValue: calculatedVolume)
+        
+        return (Type: "Volume", StringToDisplay: newVolumeText, Value: calculatedVolume)
     }
                 
     @MainActor func setButtonEnable(state: Bool){
