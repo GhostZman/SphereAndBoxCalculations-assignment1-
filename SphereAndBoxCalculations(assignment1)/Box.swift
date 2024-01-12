@@ -49,16 +49,28 @@ import Observation
                         return volumeResult
                     }
                     
-                    
-                    
+                    var combinedTaskResults :[(Type: String, StringToDisplay: String, Value: Double)] = []
+                    for await result in taskGroup{
+                        combinedTaskResults.append(result)
+                    }
+                    return combinedTaskResults
                 })
+                let sortedCombinedResults = returnedResults.sorted(by: { $0.0 < $1.0})
+                print(returnedResults)
+                print(sortedCombinedResults)
+                
+                await setButtonEnable(state: true)
             }
+            return true
         }
-    }
         
         
     
-    func calculateSurfaceArea(x: Double, y: Double, z: Double){
+    func calculateSurfaceArea(x: Double, y: Double, z: Double) async -> (Type: String, StringToDisplay: String, Value: Double){
+        
+    }
+    
+    func calculateVolume(x: Double, y: Double, z: Double) async -> (Type: String, StringToDisplay: String, Value: Double){
         
     }
                 
