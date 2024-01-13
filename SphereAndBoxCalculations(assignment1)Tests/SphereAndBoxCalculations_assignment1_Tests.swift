@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class SphereAndBoxCalculations_assignment1_Tests: XCTestCase {
+class SphereAndBoxCalculations_assignment1_Tests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -16,7 +16,18 @@ final class SphereAndBoxCalculations_assignment1_Tests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    func testBoxVolume() async {
+        let myBox = Box()
+        
+        let x = 20.0
+        let y = 1.0
+        let z = 5.0
+        
+        let area = await myBox.calculateVolume(x: x, y: y, z: z)
+        
+        XCTAssertEqual(area.Value, 100.0, accuracy:1.0E-7, "Was not equal to this resolution.")
+        
+    }
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.

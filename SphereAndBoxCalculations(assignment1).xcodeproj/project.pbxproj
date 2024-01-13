@@ -16,6 +16,14 @@
 		68140C032B51EDCF0019DEB4 /* SphereAndBoxCalculations_assignment1_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68140C022B51EDCF0019DEB4 /* SphereAndBoxCalculations_assignment1_UITestsLaunchTests.swift */; };
 		68140C102B51EF280019DEB4 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68140C0F2B51EF280019DEB4 /* Sphere.swift */; };
 		68140C122B51EF380019DEB4 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68140C112B51EF380019DEB4 /* Box.swift */; };
+		68140C132B520AC10019DEB4 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68140C112B51EF380019DEB4 /* Box.swift */; };
+		68140C142B520AC20019DEB4 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68140C112B51EF380019DEB4 /* Box.swift */; };
+		68140C152B520AC50019DEB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68140BE62B51EDCD0019DEB4 /* ContentView.swift */; };
+		68140C162B520AC50019DEB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68140BE62B51EDCD0019DEB4 /* ContentView.swift */; };
+		68140C172B520AC70019DEB4 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68140C0F2B51EF280019DEB4 /* Sphere.swift */; };
+		68140C182B520AC80019DEB4 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68140C0F2B51EF280019DEB4 /* Sphere.swift */; };
+		68140C192B520ACA0019DEB4 /* SphereAndBoxCalculations_assignment1_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68140BE42B51EDCD0019DEB4 /* SphereAndBoxCalculations_assignment1_App.swift */; };
+		68140C1A2B520ACA0019DEB4 /* SphereAndBoxCalculations_assignment1_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68140BE42B51EDCD0019DEB4 /* SphereAndBoxCalculations_assignment1_App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,7 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68140C1A2B520ACA0019DEB4 /* SphereAndBoxCalculations_assignment1_App.swift in Sources */,
 				68140BF72B51EDCE0019DEB4 /* SphereAndBoxCalculations_assignment1_Tests.swift in Sources */,
+				68140C132B520AC10019DEB4 /* Box.swift in Sources */,
+				68140C182B520AC80019DEB4 /* Sphere.swift in Sources */,
+				68140C152B520AC50019DEB4 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68140C172B520AC70019DEB4 /* Sphere.swift in Sources */,
+				68140C142B520AC20019DEB4 /* Box.swift in Sources */,
 				68140C032B51EDCF0019DEB4 /* SphereAndBoxCalculations_assignment1_UITestsLaunchTests.swift in Sources */,
+				68140C162B520AC50019DEB4 /* ContentView.swift in Sources */,
 				68140C012B51EDCE0019DEB4 /* SphereAndBoxCalculations_assignment1_UITests.swift in Sources */,
+				68140C192B520ACA0019DEB4 /* SphereAndBoxCalculations_assignment1_App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
