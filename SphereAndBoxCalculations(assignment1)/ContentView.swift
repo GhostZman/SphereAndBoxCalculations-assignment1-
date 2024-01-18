@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Bindable var myBox = Box()
+    @Bindable var mySphere = Sphere()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        HStack {
+            Text("Radius: ")
+            
+            //TextField("Enter radius of sphere ...")
         }
         .padding()
     }
