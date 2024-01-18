@@ -66,6 +66,12 @@ import Observation
         
         
     
+    /// Calculates the surface area of a box
+    /// - Parameters:
+    ///   - x: length of box in the x direction (units of length)
+    ///   - y: length of box in the y direction (units of length)
+    ///   - z: length of box in the z direction (units of length)
+    /// - Returns: the surface area of the box
     func calculateSurfaceArea(x: Double, y: Double, z: Double) async -> (Type: String, StringToDisplay: String, Value: Double){
         // Surface area = 2(xy + yz + xz)
         let calculatedSurfaceArea = 2*(x*y + y*z + x*z)
@@ -77,6 +83,12 @@ import Observation
         return (Type: "Surface Area", StringToDisplay: newSurfaceAreaText, Value: calculatedSurfaceArea)
     }
     
+    /// Calculates the volume of a box
+    /// - Parameters:
+    ///   - x: length of box in the x direction (units of length)
+    ///   - y: length of box in the y direction (units of length)
+    ///   - z: length of box in the z direction (units of length)
+    /// - Returns: the volume of the box
     func calculateVolume(x: Double, y: Double, z: Double) async -> (Type: String, StringToDisplay: String, Value: Double){
         //Volume = xyz
         let calculatedVolume = x*y*z

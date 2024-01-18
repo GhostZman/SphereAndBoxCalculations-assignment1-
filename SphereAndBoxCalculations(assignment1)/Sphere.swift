@@ -59,6 +59,9 @@ import Observation
         
         
     
+    /// Calculates the surface area of the sphere object
+    /// - Parameter r: radius of sphere (units of length)
+    /// - Returns: surface area of sphere
     func calculateSurfaceArea(r: Double) async -> (Type: String, StringToDisplay: String, Value: Double){
         // Surface area = 4 * pi * r^2
         let calculatedSurfaceArea = 4 * Double.pi * r * r
@@ -70,6 +73,9 @@ import Observation
         return (Type: "Surface Area", StringToDisplay: newSurfaceAreaText, Value: calculatedSurfaceArea)
     }
     
+    /// Calculates the volume of the sphere object
+    /// - Parameter r: radius of sphere (units of length)
+    /// - Returns: volume of sphere
     func calculateVolume(r: Double) async -> (Type: String, StringToDisplay: String, Value: Double){
         //Volume = 4/3 * pi * r^3
         let calculatedVolume = (4/3) * Double.pi * r * r * r
