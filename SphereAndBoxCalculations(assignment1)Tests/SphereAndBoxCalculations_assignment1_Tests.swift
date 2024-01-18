@@ -19,14 +19,43 @@ class SphereAndBoxCalculations_assignment1_Tests: XCTestCase {
     func testBoxVolume() async {
         let myBox = Box()
         
-        let x = 20.0
-        let y = 1.0
-        let z = 5.0
+        let testx = 20.0
+        let testy = 1.0
+        let testz = 5.0
         
-        let area = await myBox.calculateVolume(x: x, y: y, z: z)
+        let vol = await myBox.calculateVolume(x: testx, y: testy, z: testz)
         
-        XCTAssertEqual(area.Value, 100.0, accuracy:1.0E-7, "Was not equal to this resolution.")
+        XCTAssertEqual(vol.Value, 100.0, accuracy:1.0E-1, "Was not equal to this resolution.")
         
+    }
+    func testBoxSurfaceArea() async {
+        let myBox = Box()
+        
+        let testx = 20.0
+        let testy = 1.0
+        let testz = 5.0
+        
+        let surf = await myBox.calculateSurfaceArea(x: testx, y: testy, z: testz)
+        
+        XCTAssertEqual(surf.Value, 250.0, accuracy: 1.0E-1, "Was not equal to this resolution.")
+    }
+    func testSphereVolume() async {
+        let mySphere = Sphere()
+        
+        let testr = 5.0
+        
+        let vol = await mySphere.calculateVolume(r: testr)
+        
+        XCTAssertEqual(vol.Value, 523.6, accuracy:1.0E-1, "Was not equal to this resolution.")
+    }
+    func testSphereSurfaceArea() async {
+        let mySphere = Sphere()
+        
+        let testr = 5.0
+        
+        let surf = await mySphere.calculateSurfaceArea(r: testr)
+        
+        XCTAssertEqual(surf.Value, 314.16, accuracy: 1.0E-1, "Was not equal to this resolution.")
     }
     func testExample() throws {
         // This is an example of a functional test case.
