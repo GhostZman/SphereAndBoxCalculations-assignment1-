@@ -22,8 +22,11 @@ import Observation
     /// - Parameters:
     ///   - r: radius of sphere (units of length)
     func initWithRadius(r:Double) -> Bool {
-        
-        radius = r
+        if r < 0 {
+            radius = 0
+        } else {
+            radius = r
+        }
         
         Task{
             await setButtonEnable(state: false)

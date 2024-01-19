@@ -29,6 +29,9 @@ import Observation
     func initWithLengths(x:Double, y:Double, z:Double) -> Bool {
         
         if (x<0 || y<0 || z<0) {
+            xLength = 0
+            yLength = 0
+            zLength = 0
             
         } else {
             xLength = x
