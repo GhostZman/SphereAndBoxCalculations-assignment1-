@@ -28,9 +28,13 @@ import Observation
     ///   - z: length of box in the z direction (units of length)
     func initWithLengths(x:Double, y:Double, z:Double) -> Bool {
         
-        xLength = x
-        yLength = y
-        zLength = z
+        if (x<0 || y<0 || z<0) {
+            
+        } else {
+            xLength = x
+            yLength = y
+            zLength = z
+        }
         
         Task{
             await setButtonEnable(state: false)

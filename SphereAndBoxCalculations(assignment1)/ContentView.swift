@@ -17,7 +17,7 @@ struct ContentView: View {
                 Text("Radius: ")
                     .padding(.top)
                     .padding(.bottom, 15)
-                TextField("Enter radius of sphere ...", text:$radiusString, onCommit: {self.calculate()})
+                TextField("Enter radius of sphere ...", text:$radiusString)
                     .padding(.horizontal)
                     .frame(width: 100)
                     .padding(.top, 0)
