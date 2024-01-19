@@ -28,7 +28,7 @@ struct ContentView: View {
                     Text("Sphere")
                     HStack {
                         Text("Surface Area: ")
-                        TextField("", text: $mySphere.surfaceAreaText)
+                        Text("\(mySphere.surfaceArea, specifier: "%.2f")")
                             .padding(.horizontal)
                             .frame(width: 100)
                             .padding(.top, 0)
@@ -36,7 +36,7 @@ struct ContentView: View {
                     }
                     HStack {
                         Text("Volume: ")
-                        TextField("", text: $mySphere.volumeText)
+                        Text("\(mySphere.volume, specifier: "%.2f")")
                             .padding(.horizontal)
                             .frame(width: 100)
                             .padding(.top, 0)
@@ -44,10 +44,10 @@ struct ContentView: View {
                     }
                 }
                 VStack{
-                    Text("Box")
+                    Text("Bounding Box")
                     HStack {
                         Text("Surface Area: ")
-                        TextField("", text: $myBox.surfaceAreaText)
+                        Text("\(myBox.surfaceArea, specifier: "%.2f")")
                             .padding(.horizontal)
                             .frame(width: 100)
                             .padding(.top, 0)
@@ -55,7 +55,7 @@ struct ContentView: View {
                     }
                     HStack {
                         Text("Volume: ")
-                        TextField("", text: $myBox.volumeText)
+                        Text("\(myBox.volume, specifier: "%.2f")")
                             .padding(.horizontal)
                             .frame(width: 100)
                             .padding(.top, 0)
@@ -63,6 +63,11 @@ struct ContentView: View {
                     }
                 }
             }
+            Button("Calculate", action: {self.calculate()})
+                .padding(.bottom)
+                .padding()
+                .disabled(mySphere.enableButton == false)
+                .disabled(myBox.enableButton == false)
         }
         .padding()
     }
@@ -71,6 +76,7 @@ struct ContentView: View {
         myBox.enableButton = false
         
         let _ : Bool = mySphere.initWithRadius(r: Double(radiusString)!)
+        let _ : Bool = myBox.initWithLengths(x: Double(radiusString)!, y: Double(radiusString)!, z: Double(radiusString)!)
     }
 }
 
