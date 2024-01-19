@@ -23,6 +23,46 @@ struct ContentView: View {
                     .padding(.top, 0)
                     .padding(.bottom, 0)
             }
+            HStack {
+                VStack{
+                    Text("Sphere")
+                    HStack {
+                        Text("Surface Area: ")
+                        TextField("", text: $mySphere.surfaceAreaText)
+                            .padding(.horizontal)
+                            .frame(width: 100)
+                            .padding(.top, 0)
+                            .padding(.bottom, 0)
+                    }
+                    HStack {
+                        Text("Volume: ")
+                        TextField("", text: $mySphere.volumeText)
+                            .padding(.horizontal)
+                            .frame(width: 100)
+                            .padding(.top, 0)
+                            .padding(.bottom, 0)
+                    }
+                }
+                VStack{
+                    Text("Box")
+                    HStack {
+                        Text("Surface Area: ")
+                        TextField("", text: $myBox.surfaceAreaText)
+                            .padding(.horizontal)
+                            .frame(width: 100)
+                            .padding(.top, 0)
+                            .padding(.bottom, 0)
+                    }
+                    HStack {
+                        Text("Volume: ")
+                        TextField("", text: $myBox.volumeText)
+                            .padding(.horizontal)
+                            .frame(width: 100)
+                            .padding(.top, 0)
+                            .padding(.bottom, 0)
+                    }
+                }
+            }
         }
         .padding()
     }
